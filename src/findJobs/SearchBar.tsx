@@ -1,8 +1,8 @@
 import MultiInput from "./MultiInput.tsx";
 
 import {IconBriefcase, IconMapPin, IconRecharging, IconSearch} from "@tabler/icons-react";
-import {Menu} from "@mantine/core";
-import Divider = Menu.Divider;
+
+
 
 const SearchBar=()=>{
     const dropdownData = [

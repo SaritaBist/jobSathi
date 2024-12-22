@@ -1,5 +1,5 @@
 import {IconBriefcase, IconMapPin} from "@tabler/icons-react";
-import {Button, Divider, Text} from "@mantine/core";
+import {Button, Divider} from "@mantine/core";
 import ExpCard from "./ExpCard.tsx";
 import CertCard from "./CertCard.tsx";
 

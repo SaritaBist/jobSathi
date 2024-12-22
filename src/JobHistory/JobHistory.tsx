@@ -1,7 +1,5 @@
 import {Tabs} from "@mantine/core";
-import JobsDesc from "../jobsDesc/JobsDesc.tsx";
-import {talents} from "../Data/FindTalentData.tsx";
-import TalentCard from "../findtalent/TalentCard.tsx";
+
 import {jobList} from "../Data/FindjobsData.tsx";
 import Cards from "./Card.tsx";
 

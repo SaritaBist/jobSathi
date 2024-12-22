@@ -7,7 +7,27 @@ import {useDisclosure} from "@mantine/hooks";
 import {useRef, useState} from "react";
 
 import {DateInput, TimeInput} from "@mantine/dates";
-const TalentCards=({talent,schedule,invited})=>{
+
+
+interface  Talent{
+    name: string,
+    role: string,
+    company: string,
+    skills: string[],
+    description: string,
+    salary: string,
+    location: string,
+    image: string
+
+
+}
+
+interface TalentCardProps {
+    talent: Talent,
+    schedule?: boolean,
+    invited?: boolean,
+}
+const TalentCards:React.FC<TalentCardProps> = ({talent,schedule,invited})=>{
     const [opened, { open, close }] = useDisclosure(false);
     const [value, setValue] = useState<Date | null>(null);
     const ref = useRef<HTMLInputElement>(null);
@@ -27,7 +47,7 @@ const TalentCards=({talent,schedule,invited})=>{
                 <div
                     className='flex gap-4 [&>p]:text-xs [&>p]:text-bright-sun-400 [&>p]:bg-mine-shaft-600 [&>p]:py-1 [&>p]:px-2  [&>p]:rounded-lg'>
                     {
-                        talent.skills.map((skill, index) => (
+                        talent.skills.map((skill, index:number) => (
                             <p key={index}>{skill}</p>
                         ))
                     }

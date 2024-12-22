@@ -2,8 +2,7 @@ import {fields} from "../Data/PostJobData.tsx";
 import SelectInput from "./MultiSelectInput.tsx";
 import {Button, TagsInput} from "@mantine/core";
 import TextEditor from "./TextEditor.tsx";
-import {IconArrowLeft} from "@tabler/icons-react";
-import {Link} from "react-router-dom";
+
 
 const PostJobs=()=>{
       const  input=fields

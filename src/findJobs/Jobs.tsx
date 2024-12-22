@@ -1,5 +1,5 @@
 import Sort from "./Sort.tsx";
-import {Box, Divider} from "@mantine/core";
+import {Box} from "@mantine/core";
 import JobCards from "./JobCards.tsx";
 import {jobList} from "../Data/FindjobsData.tsx";
 import {Link} from "react-router-dom";

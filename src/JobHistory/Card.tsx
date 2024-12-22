@@ -1,5 +1,5 @@
 import {IconBookmark, IconBookmarkFilled, IconClockHour3} from "@tabler/icons-react";
-import {Box, Divider, Text} from '@mantine/core';
+import { Divider, Text} from '@mantine/core';
 
 const Cards=({job,applied,saved}:any)=>{
     return (

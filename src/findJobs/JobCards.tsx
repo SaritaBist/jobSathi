@@ -1,7 +1,21 @@
 import {IconBookmark, IconClockHour3} from "@tabler/icons-react";
-import {Box, Divider, Text} from '@mantine/core';
-import {Link} from "react-router-dom";
-const JobCards=({job})=>{
+import { Divider, Text} from '@mantine/core';
+
+interface Job{
+    title: string,
+    company: string,
+    applicants: number,
+    level: string,
+    type: string,
+    location: string,
+    salary: string,
+    daysAgo: number,
+    description: string
+}
+interface  JobCardProps{
+    job:Job
+}
+const JobCards=({job}:JobCardProps)=>{
 
 
     return (

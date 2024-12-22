@@ -1,5 +1,5 @@
-import {IconBriefcase, IconMapPin} from "@tabler/icons-react";
-import {Avatar, Button, Tabs} from "@mantine/core";
+import { IconMapPin} from "@tabler/icons-react";
+import {Avatar, Tabs} from "@mantine/core";
 import AboutCompany from "./AboutCompany.tsx";
 import CompanyJob from "./CompanyJob.tsx";
 import CompanyEmployee from "./CompanyEmployee.tsx";

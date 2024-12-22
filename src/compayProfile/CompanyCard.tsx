@@ -1,4 +1,4 @@
-import {IconBookmark, IconExternalLink} from "@tabler/icons-react";
+import { IconExternalLink} from "@tabler/icons-react";
 
 const  CompanyCard=({company}:any)=>{
 
