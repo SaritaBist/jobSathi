@@ -2,7 +2,7 @@ import {Avatar, TextInput} from "@mantine/core";
 import {IconSearch} from "@tabler/icons-react";
 
 const FindDreamJobPage=()=>{
-    return(<>
+    return(< div className="w-[100%]">
         <div className="flex items-center  px-16 ">
             <div className=" w-[45%] flex flex-col gap-6">
                 <div className="text-6xl text-mine-shaft-100">
@@ -34,9 +34,9 @@ const FindDreamJobPage=()=>{
             </div>
 
             <div className="w-[55%] flex items-center justify-center">
-                <div className="w-[28rem]  relative" >
-                    <img src='boy.jpg' alt={"image"}/>
-                    <div className=" w-fit border border-bright-sun-400  absolute top-[60%] -right-5 p-3 rounded-lg  backdrop-blur-md">
+                <div className="w-[28rem]  " >
+                    <img src='Boy.png' alt={"image"}/>
+                    <div className=" w-fit border border-bright-sun-400   absolute top-[50%]  right-16 p-3 rounded-lg  backdrop-blur-md">
                         <div className="text-lg text-mine-shaft-100 mb-2">10k+ got job</div>
                         <Avatar.Group>
                             <Avatar src="avatar.png" />
@@ -46,7 +46,7 @@ const FindDreamJobPage=()=>{
                         </Avatar.Group>
                     </div>
 
-                    <div className="flex  gap-2 w-fit border border-bright-sun-400  absolute top-[40%] left-30 p-3 rounded-lg  backdrop-blur-md ">
+                    <div className="flex  gap-2 w-fit border border-bright-sun-400  absolute top-[35%] right-[32%] p-3 rounded-lg  backdrop-blur-md ">
                       <div>
                          <img src={'/google.jpg'} alt={'Goole image'} className=" w-12 h-12 rounded-lg"/>
                       </div>
@@ -61,6 +61,6 @@ const FindDreamJobPage=()=>{
                 </div>
             </div>
         </div>
-    </>)
+    </div>)
 }
 export  default FindDreamJobPage

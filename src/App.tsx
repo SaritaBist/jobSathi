@@ -1,9 +1,21 @@
-import { useState } from 'react'
+
 
 import HomePage from "./pages/HomePage.tsx";
 import {createBrowserRouter} from "react-router-dom";
 import {RouterProvider} from "react-router";
 import Header from "./header/Header.tsx";
+import Footer from "./footer/Footer.tsx";
+import FindJobs from "./pages/FindJobs.tsx";
+import FindTalent from "./pages/FindTalent.tsx";
+import TalentProfile from "./pages/TalentProfile.tsx";
+import PostJobsPage from "./pages/PostJobsPage.tsx";
+import JobDescPage from "./pages/JobDescPage.tsx";
+import ApplyJobPage from "./pages/ApplyJobPage.tsx";
+import CompanyPage from "./pages/CompanyPage.tsx";
+import SignUpPage from "./pages/SignUpPage.tsx";
+import LoginPage from "./pages/LoginPage.tsx";
+import PostedJobsPage from "./pages/PostedJobsPage.tsx";
+import JobHistoryPage from "./pages/JobHistoryPage.tsx";
 
 function App() {
 
@@ -11,43 +23,103 @@ function App() {
         [
             {
                 path:'/',
-                element:<div><HomePage/></div>
+                element:<>
+                    <Header/>
+                    <HomePage/>
+                    <Footer/>
+                </>
             },
             {
                 path:'/find-jobs',
-                element:<div>
+                element:<>
                     <Header/>
-                    Find Jobs
-                </div>
+                    <FindJobs/>
+                    <Footer/>
+                </>
             },
             {
                 path:'/find-talent',
-                element:<div>
+                element:<>
                     <Header/>
-                    Find Talent</div>
+                     <FindTalent/>
+                    <Footer/>
+                </>
             },
             {
-                path:'/upload-jobs',
-                element:<div>
+                path:'/post-jobs',
+                element:<>
                     <Header/>
-                    Upload Jobs</div>
+                    <PostJobsPage/>
+                    <Footer/>
+                </>
             },
             {
-                path:'/about-us',
-                element:<div>
+                path:'/posted-jobs',
+                element:<>
                     <Header/>
-                    About</div>
+                   <PostedJobsPage/>
+                    <Footer/>
+                </>
+            },
+            {
+                path:'/talent-profile',
+                element:<>
+                    <Header/>
+                    <TalentProfile/>
+                    <Footer/>
+                </>
+            },
+
+            {
+                path:'/jobs',
+                element:<>
+                    <Header/>
+                   <JobDescPage/>
+                    <Footer/>
+                </>
+            },
+            {
+                path:'/apply-job',
+                element:<>
+                    <Header/>
+                    <ApplyJobPage/>
+                    <Footer/>
+                </>
+            },
+            {
+                path:'/job-history',
+                element:<>
+                    <Header/>
+                    <JobHistoryPage/>
+                    <Footer/>
+                </>
+            },
+            {
+                path:'/company',
+                element:<>
+                    <Header/>
+                    <CompanyPage/>
+                    <Footer/>
+                </>
+            },
+
+            {
+                path:'/signup',
+                element:<>
+                    <SignUpPage/>
+                </>
+            },
+            {
+                path:'/login',
+                element:<>
+                    <LoginPage/>
+                </>
             },
         ]
     )
   return (
-      <>
-          <RouterProvider router={routers}>
-          <div className="font-['poppins']">
-              <HomePage/>
-          </div>
-          </RouterProvider>
-      </>
+
+          <RouterProvider router={routers}/>
   )
 }
 

@@ -2,4 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    @apply m-0 p-0 h-full w-full;
+
+   }
+
+@layer base
+{
+    ul,ol{
+        list-style: revert;
+        font-size:small;
+    }
+    p{
+        font-size:small;
+    }
+    li{
+        margin-left:1rem
+    }
+}
 

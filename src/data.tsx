@@ -1,4 +1,4 @@
-import {IconKeyboard, IconReportMoney, IconTrendingUp, IconUser, IconUsersGroup} from "@tabler/icons-react";
+import {IconFileCv, IconKeyboard, IconReportMoney, IconTrendingUp, IconUser, IconUsersGroup} from "@tabler/icons-react";
 
 export const Companies=["Amazon", "Google", "Figma","Microsoft","Netflix",'Oracle',"Spotify","Wallmart"]
 
@@ -35,3 +35,52 @@ export const JobCategories = [
         jobsPosted: "600+ new jobs posted",
     },
 ];
+
+export  const works=[
+    {
+        icon:<IconFileCv stroke={3} className='bg-bright-sun-400 w-12 h-12 p-2 rounded-full' />,
+        title: "Build Your Resume",
+        description: "Create a standout resume with your skills",
+
+    },
+    {
+        icon:<IconFileCv stroke={3} className='bg-bright-sun-400 w-12 h-12 p-2 rounded-full' />,
+        title: "Apply for job",
+        description: "Find and apply for job that matches your skills",
+
+    },
+    {
+        icon:<IconFileCv stroke={3} className='bg-bright-sun-400 w-12 h-12 p-2 rounded-full' />,
+        title: "Get Hired",
+        description: "Connect with employers and start your new job",
+
+    },
+]
+
+export  const testimonials=[
+    {
+        avatar:"avatar",
+        name: "Sarita Bist",
+        review: "This job portal made job search easy and quick. Recommended to all job seekers!",
+        rating:4
+    },
+
+    {
+        avatar:"avatar1",
+        name: "Bhuwan Pandey",
+        review: "Found my dream job within a week! The application process was smooth.",
+        rating:4.5
+    },
+    {
+        avatar:"avatar2",
+        name: "Puja Chand",
+        review: "I secured a job offer within days of applying. Exceptional user experience and support.",
+        rating:5
+    },
+    {
+        avatar:"avatar1",
+        name: "Deepak Pandey",
+        review: "Highly efficient job portal with excellent resources. Helped me land a great position.",
+        rating:4.5
+    },
+]
