@@ -12,9 +12,9 @@
   "dependencies": {
     "@mantine/carousel": "^7.14.3",
     "@mantine/core": "^7.14.3",
-    "@mantine/dates": "^7.15.1",
-    "@mantine/hooks": "^7.15.1",
-    "@mantine/tiptap": "^7.15.1",
+    "@mantine/dates": "^7.14.3",
+    "@mantine/hooks": "^7.14.3",
+    "@mantine/tiptap": "^7.14.3",
     "@tabler/icons": "^3.22.0",
     "@tabler/icons-react": "^3.22.0",
     "@tiptap/extension-highlight": "^2.10.3",
