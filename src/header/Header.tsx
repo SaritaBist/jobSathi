@@ -1,7 +1,7 @@
 import {IconBrandBebo, IconX} from "@tabler/icons-react";
 import { IconBell } from '@tabler/icons-react';
 import {Link} from "react-router-dom";
-import {Avatar, Burger, Drawer, Indicator} from "@mantine/core";
+import {Avatar, Burger, Button, Drawer, Indicator} from "@mantine/core";
 import Navbar from "./Navbar.tsx";
 import {useDisclosure} from "@mantine/hooks";
 
@@ -16,16 +16,17 @@ const links=[
 ]
 const HeaderPage=()=>{
     const [opened, { open, close }] = useDisclosure(false);
-    return(<div className="w-[100%] ">
+    return(
+        <div className="w-[100%] ">
         <div className=" sticky top-0  z-10  bg-mine-shaft-950 h-16 text-white flex justify-between px-10 items-center ">
            <div className="flex  gap-1 items-center">
-               <IconBrandBebo  className="text-bright-sun-400 h-8 w-8"/>
+               <IconBrandBebo  className="text-bright-sun-400 h-10 w-10 md:h-8 md:w-8"/>
                  <div className="xs-mx:hidden text-2xl text-bright-sun-400">jobSathi</div>
            </div>
             {<Navbar/>}
 
             <div className="flex gap-3  items-center">
-                <Link to={'/signup'} className="text-bright-sun-400 hover:underline">SignUp</Link>
+                <Button component={Link} to={'/signup'} variant='filled' size="xs" className="bs-mx:!hidden text-bright-sun-400 ">SignUp</Button>
                 <div className="flex items-center gap-2 ">
                     <div className="xs-mx:hidden">Sarita</div>
                     <Avatar src='woman.png' alt='image'/>
@@ -39,11 +40,11 @@ const HeaderPage=()=>{
                     <IconBell stroke={1.5} />
                     </Indicator>
                 </div>
-                <Burger  className=" bs:hidden " opened={opened} onClick={open} aria-label="Toggle navigation" />
+                <Burger  className="bs:hidden " opened={opened} onClick={open} aria-label="Toggle navigation" />
             </div>
 
         </div>
-        <Drawer position="right" size="xs" closeButtonProps={{icon: <IconX size={30} stroke={1.5}/>}}
+        <Drawer position="left" size="xs" closeButtonProps={{icon: <IconX size={30} stroke={1.5}/>}}
                  opened={opened} onClose={close} title="">
             <div className="flex flex-col  h-full items-center gap-6">
                 {
@@ -56,6 +57,8 @@ const HeaderPage=()=>{
                         </div>
                     ))
                 }
+                <Button component={Link} to={'/signup'} variant='filled' size="xs" className=" bs-mx:hidden text-bright-sun-400 ">SignUp</Button>
+
             </div>
         </Drawer>
     </div>)

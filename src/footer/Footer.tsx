@@ -21,8 +21,8 @@ const Footer=()=>{
 
     return(
         <div className="bg-mine-shaft-950 min-w-fit mx-auto pb-52 pt-4 font-['poppins'] ">
-            <div className='mt-20 flex gap-10 justify-around w-full  '>
-                <div className=" w-1/4 flex flex-col gap-4 ml-20">
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 place-items-center px-4 sm:px-10 md:px-20 py-10   '>
+                <div className="  flex flex-col gap-4 ml-20">
                     <div className="flex  gap-1 items-center cursor-pointer">
                         <IconBrandBebo className="text-bright-sun-400 h-8 w-8"/>
                         <div className="text-2xl text-mine-shaft-100">jobSathi</div>
@@ -42,7 +42,7 @@ const Footer=()=>{
 
                 {
                     footerLinks.map((linkGroup) => (
-                        <div key={linkGroup.title} className="w-1/4">
+                        <div key={linkGroup.title} className="">
                             <h3 className="text-xl text-bright-sun-400 ">{linkGroup.title}</h3>
                             <ul className="list-none">
                                 {linkGroup.links.map((link) => (
