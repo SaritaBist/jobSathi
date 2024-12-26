@@ -3,7 +3,7 @@ import {Box} from "@mantine/core";
 import JobCards from "./JobCards.tsx";
 import {jobList} from "../Data/FindjobsData.tsx";
 import {Link} from "react-router-dom";
-import {useMediaQuery} from "@mantine/hooks";
+
 
 
  const Jobs=()=>{

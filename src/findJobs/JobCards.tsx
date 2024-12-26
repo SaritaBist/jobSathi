@@ -1,6 +1,6 @@
 import {IconBookmark, IconClockHour3} from "@tabler/icons-react";
 import { Divider, Text} from '@mantine/core';
-import {useMediaQuery} from "@mantine/hooks";
+
 
 interface Job{
     title: string,
