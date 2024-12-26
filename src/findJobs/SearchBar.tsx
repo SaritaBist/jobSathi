@@ -1,10 +1,14 @@
 import MultiInput from "./MultiInput.tsx";
 
 import {IconBriefcase, IconMapPin, IconRecharging, IconSearch} from "@tabler/icons-react";
+import {useDisclosure, useMediaQuery} from "@mantine/hooks";
+import {Button, Collapse} from "@mantine/core";
 
 
 
 const SearchBar=()=>{
+    const [opened, { toggle }] = useDisclosure(false);
+    const matches = useMediaQuery('(max-width: 476px)');
     const dropdownData = [
         {
             title: "Job Title",
@@ -68,15 +72,24 @@ const SearchBar=()=>{
         }
     ];
 
-    return(<div className={'grid grid-cols-2 xs:grid-cols-3 gap-3'}>
-        {
-            dropdownData.map((item,index)=>(
-                <div className={'w-[17%]  xs:w-[60%]'} key={index}>
-                    <MultiInput {...item}/>
-                </div>
-            ))
-        }
+    return(
+        <div className=" pt-10 px-10">
+            <div className="flex justify-end">
+                {matches && <Button onClick={toggle} variant='outline' color='brightSun.5' className="" >Filter</Button>}
+            </div>
+            <Collapse in={(opened || !matches)}>
+                <div className={'grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 lg:grid-cols-5  gap-3 '}>
+                   {
+                    dropdownData.map((item, index) => (
+                        <div className={''} key={index}>
+                            <MultiInput {...item}/>
+                        </div>
+                    ))
+                    }
 
-    </div>)
+               </div>
+                </Collapse>
+        </div>
+    )
 }
-export  default  SearchBar
+export default SearchBar

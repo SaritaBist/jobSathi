@@ -1,4 +1,4 @@
-import { Avatar, TextInput } from "@mantine/core";
+import {Avatar, Button, TextInput} from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 
 const FindDreamJobPage = () => {
@@ -36,8 +36,9 @@ const FindDreamJobPage = () => {
                         <div>
                             <IconSearch
                                 stroke={2}
-                                className="w-12 h-12 lg:w-16 lg:h-16 bg-bright-sun-400 text-mine-shaft-100 p-2 rounded-lg cursor-pointer hover:bg-bright-sun-500"
+                                className="w-12 h-12 bs-mx:hidden  lg:w-16 lg:h-16 bg-bright-sun-400 text-mine-shaft-100 p-2 rounded-lg cursor-pointer hover:bg-bright-sun-500"
                             />
+                            <Button variant='filled' size={'xs'} fullWidth className="bs:!hidden ">Search</Button>
                         </div>
                     </div>
                 </div>

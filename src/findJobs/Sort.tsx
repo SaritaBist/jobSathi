@@ -31,9 +31,10 @@ function Sort() {
                     setSelectedItem(val);
                     combobox.closeDropdown();
                 }}
+
             >
                 <Combobox.Target>
-                    <div onClick={() => combobox.toggleDropdown()} className='flex gap-2  border border-bright-sun-400 p-2 rounded-xl items-center'>
+                    <div onClick={() => combobox.toggleDropdown()} className='flex gap-2  border border-bright-sun-400 p-2  xs-mx:p-1 xs-mx:text-xs  rounded-xl items-center'>
                         <p className='text-sm'>{selectedItem}</p><IconAdjustments stroke={2}  className='text-bright-sun-400'/>
                     </div>
                 </Combobox.Target>

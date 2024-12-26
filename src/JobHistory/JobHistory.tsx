@@ -38,7 +38,7 @@ const JobHistory=()=>{
                         <div className='flex flex-wrap xl-mx:justify-center gap-3 mt-8'>
                             {
                                 jobList.map((job) => (
-                                    <Cards job={job}/>
+                                    <Cards job={job} offered/>
                                 ))
                             }
                         </div>
@@ -47,7 +47,7 @@ const JobHistory=()=>{
                         <div className='flex flex-wrap xl-mx:justify-center gap-3 mt-8'>
                             {
                                 jobList.map((job) => (
-                                    <Cards job={job}/>
+                                    <Cards job={job} interviewing/>
                                 ))
                             }
                         </div>

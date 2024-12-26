@@ -1,7 +1,7 @@
-import {IconBookmark, IconBookmarkFilled, IconClockHour3} from "@tabler/icons-react";
-import { Divider, Text} from '@mantine/core';
+import {IconBookmark, IconBookmarkFilled, IconCalendarWeek, IconClockHour3} from "@tabler/icons-react";
+import {Button, Divider, Text} from '@mantine/core';
 
-const Cards=({job,applied,saved}:any)=>{
+const Cards=({job,applied,saved,offered,interviewing}:any)=>{
     return (
         <div
             className=' flex flex-col gap-3 w-72 bg-mine-shaft-700  p-3  rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-amber-400 '>
@@ -35,6 +35,18 @@ const Cards=({job,applied,saved}:any)=>{
                     <IconClockHour3 className='h-4 w-4'/> {applied? "Aplied" :"Posted"} {job.daysAgo} days ago
                 </div>
             </div>
+            {
+                 offered && <div className='flex gap-4'>
+                    <Button variant="outline"  color='brightSun.4' fullWidth>Accept</Button>
+
+                    <Button variant="light" color='brightSun.4' fullWidth>Reject</Button>
+
+                </div>
+            }
+            {
+                interviewing &&
+                <div className="flex  items-center gap-2 text-xs text-mine-shaft-200"><IconCalendarWeek stroke={2} size={16} className="text-bright-sun-400"/>Mon,25,January &bull; <span className="text-mine-shaft-300">10:30</span></div>
+            }
 
         </div>
 
