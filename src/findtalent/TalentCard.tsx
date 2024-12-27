@@ -33,7 +33,7 @@ const TalentCards:React.FC<TalentCardProps> = ({talent,schedule,invited})=>{
     const ref = useRef<HTMLInputElement>(null);
     return(
         <>
-            <div className=' flex flex-col gap-3 w-96 bg-mine-shaft-700  py-3 px-4  rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-amber-400 '>
+            <div className=' flex flex-col bs-mx:w-full  xl-mx:w-[45%]  gap-3 w-96 bg-mine-shaft-700  py-3 px-4  rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-amber-400 '>
                 <div className={'flex  items-center justify-between '}>
                     <div className={'flex items-center gap-3'}>
                         <Avatar src={`${talent.image}.png`} className=''/>

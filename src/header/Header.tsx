@@ -27,7 +27,7 @@ const HeaderPage=()=>{
             {<Navbar/>}
 
             <div className="flex gap-3  items-center">
-                <Button component={Link} to={'/signup'} variant='filled' size="xs" autoContrast className="bs-mx:!hidden text-bright-sun-400 ">SignUp</Button>
+                <Button component={Link} to={'/signup'} variant='filled' size="xs" autoContrast className="bs-mx:!hidden text-bright-sun-400 ">Sign Up</Button>
 
                 <ProfileMenu/>
                 {/*<div className="p-1.5 bg-mine-shaft-800 rounded-full">*/}
