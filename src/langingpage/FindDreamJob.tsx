@@ -38,7 +38,9 @@ const FindDreamJobPage = () => {
                                 stroke={2}
                                 className="w-12 h-12 bs-mx:hidden  lg:w-16 lg:h-16 bg-bright-sun-400 text-mine-shaft-100 p-2 rounded-lg cursor-pointer hover:bg-bright-sun-500"
                             />
-                            <Button variant='filled' size={'xs'} fullWidth className="bs:!hidden ">Search</Button>
+                           <div  className="bs:!hidden  flex  justify-end">
+                               <Button variant='filled'  >Search</Button>
+                           </div>
                         </div>
                     </div>
                 </div>

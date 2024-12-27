@@ -4,7 +4,7 @@ import {Button, Divider, Text} from '@mantine/core';
 const Cards=({job,applied,saved,offered,interviewing}:any)=>{
     return (
         <div
-            className=' flex flex-col gap-3 w-72 bg-mine-shaft-700  p-3  rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-amber-400 '>
+            className=' flex flex-col  bs-mx:w-full  xl-mx:w-[45%] gap-3 w-72 bg-mine-shaft-700  p-3  rounded-xl hover:shadow-[0_0_5px_1px_yellow] !shadow-amber-400 '>
             <div className={'flex  items-center justify-between '}>
                 <div className={'flex items-center gap-3'}>
                     <img src={`icons/${job.company}.png`} alt={'img'} className='h-7 w-7'/>

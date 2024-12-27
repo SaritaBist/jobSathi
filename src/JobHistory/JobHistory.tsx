@@ -5,8 +5,8 @@ import Cards from "./Card.tsx";
 
 const JobHistory=()=>{
     return(
-        <div className="mt-6 ">
-            <div className="text-2xl font-semibold text-mine-shaft-50 mb-5"> Job History</div>
+        <div className="mt-6 px-4 ">
+            <div className="sm-mx:xl text-2xl font-semibold text-mine-shaft-50 mb-5"> Job History</div>
             <div className="mt-10">
                 <Tabs defaultValue="applied" radius="sm">
                     <Tabs.List className="[&_button]:!text-lg font-semibold">
