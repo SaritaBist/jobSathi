@@ -1,9 +1,10 @@
 import {IconBrandBebo, IconX} from "@tabler/icons-react";
 import { IconBell } from '@tabler/icons-react';
 import {Link} from "react-router-dom";
-import {Avatar, Burger, Button, Drawer, Indicator} from "@mantine/core";
+import { Burger, Button, Drawer, Indicator} from "@mantine/core";
 import Navbar from "./Navbar.tsx";
 import {useDisclosure} from "@mantine/hooks";
+import ProfileMenu from "./ProfileMenu.tsx";
 
 const links=[
     {name:'Home',path:'/'},
@@ -26,12 +27,9 @@ const HeaderPage=()=>{
             {<Navbar/>}
 
             <div className="flex gap-3  items-center">
-                <Button component={Link} to={'/signup'} variant='filled' size="xs" className="bs-mx:!hidden text-bright-sun-400 ">SignUp</Button>
-                <div className="flex items-center gap-2 ">
-                    <div className="xs-mx:hidden">Sarita</div>
-                    <Avatar src='woman.png' alt='image'/>
+                <Button component={Link} to={'/signup'} variant='filled' size="xs" autoContrast className="bs-mx:!hidden text-bright-sun-400 ">SignUp</Button>
 
-                </div>
+                <ProfileMenu/>
                 {/*<div className="p-1.5 bg-mine-shaft-800 rounded-full">*/}
                 {/*    <IconSettings stroke={1.5}/>*/}
                 {/*</div>*/}

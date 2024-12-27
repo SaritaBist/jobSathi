@@ -16,6 +16,7 @@ import SignUpPage from "./pages/SignUpPage.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
 import PostedJobsPage from "./pages/PostedJobsPage.tsx";
 import JobHistoryPage from "./pages/JobHistoryPage.tsx";
+import ProfilePage from "./pages/ProfilePage.tsx";
 
 function App() {
 
@@ -99,6 +100,15 @@ function App() {
                 element:<>
                     <Header/>
                     <CompanyPage/>
+                    <Footer/>
+                </>
+            },
+
+            {
+                path:'/profile',
+                element:<>
+                    <Header/>
+                    <ProfilePage/>
                     <Footer/>
                 </>
             },
