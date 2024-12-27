@@ -11,10 +11,11 @@ const links=[
     {name:'Find Jobs',path:'/find-jobs'},
     {name:'Find Talent',path:'/find-talent'},
     {name:'Post Jobs',path:'/post-jobs'},
+    {name:'Posted Jobs',path:'/posted-jobs'},
     {name:'Job History',path:'/job-history'},
 
-
 ]
+
 const HeaderPage=()=>{
     const [opened, { open, close }] = useDisclosure(false);
     return(
