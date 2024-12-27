@@ -11,7 +11,7 @@ const links=[
     {name:'Find Jobs',path:'/find-jobs'},
     {name:'Find Talent',path:'/find-talent'},
     {name:'Post Jobs',path:'/post-jobs'},
-    {name:'About Us',path:'/about-us'},
+    {name:'Job History',path:'/job-history'},
 
 
 ]
