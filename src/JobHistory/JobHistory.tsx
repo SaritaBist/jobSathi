@@ -9,7 +9,7 @@ const JobHistory=()=>{
             <div className="sm-mx:xl text-2xl font-semibold text-mine-shaft-50 mb-5"> Job History</div>
             <div className="mt-10">
                 <Tabs defaultValue="applied" radius="sm">
-                    <Tabs.List className="[&_button]:!text-lg font-semibold">
+                    <Tabs.List className="[&_button]:!text-lg  xs-mx:[&_button]:!text-xs font-semibold">
                         <Tabs.Tab value="applied"> Applied</Tabs.Tab>
                         <Tabs.Tab value="saved">Saved</Tabs.Tab>
                         <Tabs.Tab value="offered">Offered</Tabs.Tab>

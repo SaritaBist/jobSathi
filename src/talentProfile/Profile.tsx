@@ -2,26 +2,28 @@ import {IconBriefcase, IconMapPin} from "@tabler/icons-react";
 import {Button, Divider} from "@mantine/core";
 import ExpCard from "./ExpCard.tsx";
 import CertCard from "./CertCard.tsx";
+import {useMediaQuery} from "@mantine/hooks";
 
 const Profile=()=>{
+   const matches = useMediaQuery('(max-width: 437px)');
     return(
-        <div  className='w-[70%] py-3 px-3'>
+        <div  className='w-[70%] lg-mx:w-full py-3 px-3'>
         <div className='relative'>
-            <img src='cover.png' alt={'cover'} className='rounded-t-xl'/>
-            <img src='avatar.png' alt={'avatar'} className=' h-36 w-36 rounded-full absolute -bottom-16 left-6 border-4 border-mine-shaft-800'/>
+            <img src='cover.png' alt={'cover'} className='rounded-t-xl xs-mx:h-16'/>
+            <img src='avatar.png' alt={'avatar'} className=' h-36 w-36  md-mx:w-32 md-mx:h-32  sm-mx:w-28 sm-mx:h-28  xs-mx:w-24 xs-mx:h-24 xsm-mx:w-20 xsm-mx:h-20 rounded-full absolute -bottom-16 left-6  md-mx:-bottom-14 sm-mx:-bottom-10 xs-mx:-bottom-12 xsm-mx:-bottom-10 border-4 border-mine-shaft-800'/>
         </div>
-        <div className='mt-20 flex justify-between  mx-2'>
+        <div className='mt-20 flex justify-between   mx-2 xs-mx:flex-wrap gap-2  '>
             <div className='flex flex-col justify-center ml-4'>
                 <p className='text-semibold text-mine-shaft-200 text-xl'>Sarita Bist</p>
                 <div className=' text-sm text-mine-shaft-300 flex gap-2'>
                    <IconBriefcase size={16}/> <p >Software Engineer &#x2022; Microsoft </p>
                 </div>
-                <div className='flex text-xs text-mine-shaft-300 items-cneter gap-2'>
+                <div className='flex text-xs text-mine-shaft-300 items-center gap-2'>
                     <IconMapPin className='h-4 w-4'/> New York,United States
                 </div>
 
             </div>
-            <Button variant="light" color='brightSun.4' >Message</Button>
+            <Button variant="light" color='brightSun.4' size={matches?'xs':'md'} >Message</Button>
 
         </div>
         <Divider color='mineShaft.6 ' size={'xs'} className="mt-2" />

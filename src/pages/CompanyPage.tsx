@@ -10,8 +10,8 @@ const CompanyPage=()=>{
     const navigate=useNavigate()
     return<div className="min-h-[100vh]  min-w-fit bg-mine-shaft-900  font-['poppins'] py-2 px-4 mx-auto">
         <Button leftSection={<IconArrowLeft size={20} />} variant="light" onClick={()=>navigate(-1)} color='brightSun.4'  className=' mt-5 ml-3'>Back</Button>
-        <div className='flex gap-4 '>
-          <CompanyDesc/>
+        <div className='flex gap-4  lg-mx:flex-col flex-row'>
+            <CompanyDesc/>
             <SimilarCompanies/>
         </div>
     </div>

@@ -46,10 +46,10 @@ function SelectInputt(props:any) {
             }}
         >
             <Combobox.Target>
-                <InputBase withAsterisk className="[&_input]:font-medium"
+                <InputBase withAsterisk className="[&_input]:font-medium xs-mx:[&_input]:text-xs"
                            label={props.label}
                            rightSection={<Combobox.Chevron />}
-                           leftSection={<props.leftSection  stroke={1.5} ClassName="h-6 w-6"/>}
+                           leftSection={<props.leftSection  stroke={1.5} ClassName="!h-6 !w-6 xs-mx:h-4 xs-mx:w-4"/>}
                            value={search}
                            onChange={(event) => {
                                combobox.openDropdown();

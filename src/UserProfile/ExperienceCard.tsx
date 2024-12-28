@@ -9,7 +9,7 @@ const ExperienceCard=(props:any)=>{
     return(<>
         {
             edit?<><ExpInput setEdit={setEdit}/></>: <>
-                <div className={'flex  items-center justify-between  '}>
+                <div className={'flex  items-center justify-between flex-wrap xs-mx:gap-2  '}>
                     <div className={'flex items-center gap-3'}>
                         <img src={`icons/Google.png`} alt={'img'} className='h-8 w-8'/>
                         <div className="">

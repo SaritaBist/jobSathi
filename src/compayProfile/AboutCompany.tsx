@@ -19,7 +19,7 @@ const AboutCompany = () => {
 
                 return (
                     <div key={index} className="mt-5">
-                        <div className="text-xl font-semibold">{key}</div>
+                        <div className="text-xl font-semibold xs-mx:text-lg">{key}</div>
                         {companyKey !== "Website" && (
                             <div className="text-sm text-justify">
                                 {companyKey !== "Specialties" ? (

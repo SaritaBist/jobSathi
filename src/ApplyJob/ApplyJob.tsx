@@ -33,17 +33,17 @@ const ApplyJob=()=>{
          <div className={'max-w-screen-md mt-6  mx-auto  ' }>
            <div className={'flex items-center gap-3 mb-5'}>
                 <div className='bg-mine-shaft-800 rounded-xl p-3'>
-                    <img src={`icons/Microsoft.png`} alt={'img'} className='h-10 w-10'/>
+                    <img src={`icons/Microsoft.png`} alt={'img'} className='h-10 w-10 xs-mx:h-8 xs-mx:w-8'/>
                 </div>
                 <div className="">
-                    <p className='text-semibold text-mine-shaft-200 text-xl'>Software Engineer</p>
+                    <p className='text-semibold text-mine-shaft-200  text-xl xs-mx:text-lg'>Software Engineer</p>
                     <p className='text-xs text-mine-shaft-300'>Microsoft &bull; 2 days ago &#x2022; 34
                         applications</p>
                 </div>
            </div>
         <Divider color={'mineShaft.5'}/>
            <div className='mt-5'>
-             <p className={'text-lg font-semibold'}>Submit Your Applications</p>
+             <p className={'text-lg font-semibold xs-mx:font-medium'}>Submit Your Applications</p>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                   <TextInput
                       withAsterisk
@@ -121,10 +121,10 @@ const ApplyJob=()=>{
            </div>
 
     </div>
-        <Notification className={`!border border-bright-sun-400 !fixed top-10 !left-[30%] transition duration-300 ease-in-out ${submitData ? 'translate-y-10':'-translate-y-20'} }`} closeButtonProps={{ 'aria-label': 'Hide notification' }}
-                      icon={<IconCheck style={{ width: rem(20), height: rem(20) }} />} color="teal" title="Application Submitted Successfully" mt="md">
-            Redirecting to find job page in {second} sec...
-        </Notification>
+        {/*<Notification className={`!border border-bright-sun-400 !fixed top-10 !left-[30%] transition duration-300 ease-in-out ${submitData ? 'translate-y-10':'-translate-y-20'} }`} closeButtonProps={{ 'aria-label': 'Hide notification' }}*/}
+        {/*              icon={<IconCheck style={{ width: rem(20), height: rem(20) }} />} color="teal" title="Application Submitted Successfully" mt="md">*/}
+        {/*    Redirecting to find job page in {second} sec...*/}
+        {/*</Notification>*/}
     </>
 }
 export default ApplyJob

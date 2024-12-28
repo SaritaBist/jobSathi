@@ -5,6 +5,7 @@ import {useState} from "react";
 import fields from "../Data/ProfileData.tsx";
 import CertiCard from "./CertiCard.tsx";
 import ExperienceCard from "./ExperienceCard.tsx";
+import {useMediaQuery} from "@mantine/hooks";
 
 
 
@@ -25,33 +26,35 @@ const UserProfile=()=>{
         setEdit(edit2)
 
     }
+
+    const matches = useMediaQuery('(max-width: 475px)');
+
     const [file, setFile] = useState<File | null>(null);
     console.log(file)
     return(
-        <div  className='w-[95%] py-3 mx-auto px-2'>
+        <div  className='w-[95%] lg-mx:w-full  py-3 mx-auto px-3'>
             <div className='relative'>
                 <FileButton onChange={setFile} accept="image/png,image/jpeg,image/jpg">
-                    {(props) => <IconEdit stroke={1} className="text-bright-sun-400 absolute   right-10 top-6" {...props}/>}
+                    {(props) => <IconEdit stroke={1} size={matches ? "20":'25'}  className="text-bright-sun-400 absolute   right-10 top-6" {...props}/>}
                 </FileButton>
 
-                <img src='cover.png' alt={'cover'} className='rounded-t-xl'/>
-                <img src='avatar.png' alt={'avatar'} className=' h-36 w-36 rounded-full absolute -bottom-16 left-6 border-4 border-mine-shaft-800'/>
+                <img src='cover.png' alt={'cover'} className='rounded-t-xl xs-mx:h-16'/>
+                <img src='avatar.png' alt={'avatar'} className=' h-36 w-36  md-mx:w-32 md-mx:h-32  sm-mx:w-28 sm-mx:h-28  xs-mx:w-24 xs-mx:h-24 xsm-mx:w-20 xsm-mx:h-20 rounded-full absolute -bottom-16 left-6  md-mx:-bottom-14 sm-mx:-bottom-10 xs-mx:-bottom-12 xsm-mx:-bottom-10 border-4 border-mine-shaft-800'/>
 
             </div>
 
-            <div className='mt-20 flex justify-between  mx-2'>
-                <div className='flex flex-col justify-center ml-4'>
+            <div className=' mt-20 xs-mx:mt-14 flex justify-between    '>
+                <div className='flex flex-col justify-center ml-4 w-full'>
                     <p className='text-semibold text-mine-shaft-200 text-xl'>Sarita Bist</p>
                     {
-                        edit[0] ? <>
-                            <div className="flex gap-2">
+                        edit[0] ? <div className="flex flex-col  ">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
                                 <SelectInputt {...input[0]}/>
                                 <SelectInputt {...input[1]}/>
 
-
                             </div>
                             <SelectInputt {...input[2]}/>
-                        </> : <>
+                        </div> : <>
                             <div className=' text-sm text-mine-shaft-300 flex gap-2'>
                                 <IconBriefcase size={16}/> <p>Software Engineer &#x2022; Microsoft </p>
                             </div>
@@ -65,20 +68,20 @@ const UserProfile=()=>{
                 </div>
 
 
-                <ActionIcon variant="subtle" aria-label="Settings">
-                    {edit[0] ? <IconDeviceFloppy stroke={1.5} className="text-bright-sun-400"
+                <ActionIcon variant="subtle" aria-label="Settings" >
+                    {edit[0] ? <IconDeviceFloppy  className="text-bright-sun-400" size={matches ? "20":'25'}
                                                  onClick={() => handleEditClick(0)}/> :
-                        <IconEdit stroke={1} className="text-bright-sun-400" onClick={() => handleEditClick(0)}/>}
+                        <IconEdit stroke={1} size={matches ? "20":'25'} className="text-bright-sun-400" onClick={() => handleEditClick(0)}/>}
                 </ActionIcon>
 
 
             </div>
             <Divider color='mineShaft.6 ' size={'xs'} className="mt-2"/>
             <div className='mt-10 ml-4'>
-                <h2 className='text-2xl mb-3 font-semibold flex justify-between'>About  <ActionIcon variant="subtle" aria-label="Settings">
-                    {edit[1] ? <IconDeviceFloppy stroke={1.5} className="text-bright-sun-400"
+                <h2 className='text-2xl xs-mx:text-xl mb-3 font-semibold flex justify-between'>About  <ActionIcon variant="subtle" aria-label="Settings">
+                    {edit[1] ? <IconDeviceFloppy stroke={1.5} className="text-bright-sun-400" size={matches ? "20":'25'}
                                                  onClick={() => handleEditClick(1)}/> :
-                        <IconEdit stroke={1} className="text-bright-sun-400" onClick={() => handleEditClick(1)}/>}
+                        <IconEdit stroke={1}  size={matches ? "20":'25'} className="text-bright-sun-400" onClick={() => handleEditClick(1)}/>}
                 </ActionIcon></h2>
                 {
                     edit[1] ?  <Textarea
@@ -96,10 +99,10 @@ const UserProfile=()=>{
 
             <Divider color='mineShaft.6 ' size={'xs'} className="mt-2" />
             <div className='mt-10 ml-4'>
-                <h2 className='text-2xl mb-3 font-semibold flex justify-between'>Skills <ActionIcon variant="subtle" aria-label="Settings">
-                    {edit[2] ? <IconDeviceFloppy stroke={1.5} className="text-bright-sun-400"
+                <h2 className='text-2xl  xs-mx:text-xl mb-3 font-semibold flex justify-between'>Skills <ActionIcon variant="subtle" aria-label="Settings">
+                    {edit[2] ? <IconDeviceFloppy stroke={1.5} className="text-bright-sun-400" size={matches ? "20":'25'}
                                                  onClick={() => handleEditClick(2)}/> :
-                        <IconEdit stroke={1} className="text-bright-sun-400" onClick={() => handleEditClick(2)}/>}
+                        <IconEdit stroke={1} size={matches ? "20":'25'}  className="text-bright-sun-400" onClick={() => handleEditClick(2)}/>}
                 </ActionIcon>
                 </h2>
                 <div className='flex gap-4 flex-wrap'>
@@ -121,11 +124,11 @@ const UserProfile=()=>{
 
             <Divider color='mineShaft.6 ' size={'xs'} className="mt-2"/>
             <div className='mt-10 ml-4'>
-                <h2 className='text-2xl mb- 3font-semibold flex justify-between'>Experience
+                <h2 className='text-2xl  xs-mx:text-xl mb- 3font-semibold flex justify-between'>Experience
                     <ActionIcon variant="subtle" aria-label="Settings">
-                        {edit[3] ? <IconDeviceFloppy stroke={1.5} className="text-bright-sun-400"
+                        {edit[3] ? <IconDeviceFloppy stroke={1.5} className="text-bright-sun-400" size={matches ? "20":'25'}
                                                      onClick={() => handleEditClick(3)}/> :
-                            <IconEdit stroke={1} className="text-bright-sun-400" onClick={() => handleEditClick(3)}/>}
+                            <IconEdit stroke={1}  size={matches ? "20":'25'} className="text-bright-sun-400" onClick={() => handleEditClick(3)}/>}
                     </ActionIcon>
                 </h2>
                 <div   className="my-5">
@@ -135,11 +138,11 @@ const UserProfile=()=>{
 
             <Divider color='mineShaft.6 ' size={'xs'} className="mt-2" />
             <div className='mt-10 ml-4'>
-                <h2 className='text-2xl mb- 3font-semibold flex justify-between'>Certifications
+                <h2 className='text-2xl  xs-mx:text-xl  mb- 3font-semibold flex justify-between'>Certifications
                     <ActionIcon variant="subtle" aria-label="Settings">
-                        {edit[0] ? <IconDeviceFloppy stroke={1.5} className="text-bright-sun-400"
+                        {edit[0] ? <IconDeviceFloppy stroke={1.5} size={matches ? "20":'25'} className="text-bright-sun-400"
                                                      onClick={() => handleEditClick(0)}/> :
-                            <IconEdit stroke={1} className="text-bright-sun-400" onClick={() => handleEditClick(0)}/>}
+                            <IconEdit stroke={1}  size={matches ? "20":'25'} className="text-bright-sun-400" onClick={() => handleEditClick(0)}/>}
                     </ActionIcon>
                 </h2>
                 <div className="my-5">

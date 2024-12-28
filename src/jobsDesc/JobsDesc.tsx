@@ -7,9 +7,9 @@ const JobsDesc=({edit}:any)=>{
     const data= DOMPurify.sanitize(desc)
 
     return <>
-        <div className=' w-[70%] py-3 px-3  mt-4'>
-            <div className={'flex  items-center justify-between '}>
-                <div className={'flex items-center gap-3'}>
+        <div className=' lg-mx:w-full w-[70%] py-3 px-3  mt-4'>
+            <div className="flex  items-center justify-between xs-mx:flex-wrap">
+                <div className="flex items-center gap-3">
                     <div className='bg-mine-shaft-800 rounded-xl p-3'>
                         <img src={`icons/Microsoft.png`} alt={'img'} className='h-10 w-10'/>
                     </div>
@@ -19,9 +19,9 @@ const JobsDesc=({edit}:any)=>{
                             applications</p>
                     </div>
                 </div>
-                <div className='flex flex-col items-center gap-2'>
+                <div className='flex flex-col items-center xs-mx:flex-row  xs-mx:items-center  xs-mx:gap-6  gap-2'>
                     <Button component={Link} to={'/apply-job'} variant="light" color='brightSun.4'
-                            className=' mt-5 ml-3 rounded-lg'>{edit ? "Edit" :"Apply"}</Button>
+                            className=' mt-5 ml-3 rounded-lg '>{edit ? "Edit" :"Apply"}</Button>
                     {
                         edit ? <Button  variant="outline" color="red.5" size="sm">Delete</Button> :<IconBookmark stroke={2} className='cursor-pointer text-bright-sun-400 '/>
                     }
@@ -29,10 +29,10 @@ const JobsDesc=({edit}:any)=>{
             </div>
 
             <Divider color={'mineShaft.5'} className={'my-4'}/>
-            <div className='flex  justify-between'>
+            <div className='flex  justify-between sm-mx:gap-8 sm-mx:flex-wrap'>
                 {card.map((item, index) => (
                     <div key={index} className={'flex flex-col items-center gap-1'}>
-                        <ActionIcon variant="light" className='!h-10 !w-10' color={'brightSun.4'} aria-label="Settings">
+                        <ActionIcon variant="light" className='!h-10 !w-10 xs-mx:!h-8 xs-mx:!w-8' color={'brightSun.4'} aria-label="Settings">
                             <item.icon className={'w-7 h-7'} stroke={1.5}/>
                         </ActionIcon>
                         <p className='text-sm text-mine-shaft-300'>{item.name}</p>
@@ -46,7 +46,7 @@ const JobsDesc=({edit}:any)=>{
                     {
                         skills.map((item) => (
                             <div key={item}
-                                 className="text-sm   bg-bright-sun-300 bg-opacity-15 text-bright-sun-400 rounded-2xl py-1 px-3">
+                                 className="text-sm   bg-bright-sun-300 bg-opacity-15 text-bright-sun-400 rounded-2xl py-1 px-2">
                                 {item}
                             </div>
 
@@ -62,7 +62,7 @@ const JobsDesc=({edit}:any)=>{
 
             <div>
                 <div className='text-xl mt-10'>About Company</div>
-                <div className={'flex justify-between'}>
+                <div className={'flex justify-between  flex-row xs-mx:flex-col xs-mx:gap-2'}>
 
                     <div className={'flex items-center gap-3'}>
 

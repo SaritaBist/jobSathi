@@ -8,10 +8,10 @@ import RecommendeedJobs from "../jobsDesc/RecommendedJobs.tsx";
 const JobsDescription=()=>{
 
     return(
-        <div className="min-h-[100vh] min-w-fit bg-mine-shaft-900  font-['poppins'] py-2 px-4">
+        <div className="min-h-[100vh]  bg-mine-shaft-900  font-['poppins'] py-2 px-4">
             <Button leftSection={<IconArrowLeft size={20}/>} variant="light" component={Link} to='/find-jobs'
                     color='brightSun.4' className=' mt-5 ml-3'>Back</Button>
-            <div className='flex gap-4 '>
+            <div className='flex gap-4 lg-mx:flex-col flex-row'>
                 <JobsDesc/>
                 <RecommendeedJobs/>
             </div>

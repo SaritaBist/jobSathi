@@ -6,12 +6,12 @@ import CompanyEmployee from "./CompanyEmployee.tsx";
 
 const CompanyDesc=()=>{
    return(
-       <div  className='w-[75%] py-3 px-3'>
+       <div  className='w-[75%] lg-mx:w-full py-3 px-3'>
          <div className='relative'>
-           <img src='company_cover.png' alt={'cover'} className='rounded-t-xl '/>
-           <img src='companies/Microsoft.png' alt={'image'} className=' h-36 w-36 rounded-lg absolute -bottom-16 left-6 '/>
+           <img src='company_cover.png' alt={'cover'} className='rounded-t-xl xs-mx:h-20 '/>
+           <img src='companies/Microsoft.png' alt={'image'} className=' h-36 w-36  md-mx:w-32 md-mx:h-32  sm-mx:w-28 sm-mx:h-28  xs-mx:w-24 xs-mx:h-24 xsm-mx:w-20 xsm-mx:h-20 rounded-xl absolute -bottom-16 left-6  md-mx:-bottom-14 sm-mx:-bottom-10 xs-mx:-bottom-12 xsm-mx:-bottom-10 border-4 border-mine-shaft-800 '/>
          </div>
-         <div className='mt-20 flex justify-between items-start  mx-2'>
+         <div className='mt-20 flex justify-between items-start  mx-2 xs-mx:flex-col xs-mx:gap-3'>
            <div className='flex flex-col justify-center ml-4'>
              <p className='text-semibold text-mine-shaft-200 text-xl'>Microsoft</p>
 

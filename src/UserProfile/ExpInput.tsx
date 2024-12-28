@@ -12,8 +12,8 @@ const ExpInput=(props:any)=>{
     const [jobDesc,setJobDesc]=useState('As a Software Engineer at Google, I am responsible for designing, developing, and maintaining scalable software solutions that enhance user experience and improve operational efficiency. My role involves collaborating with cross-functional teams to define project requirements, develop technical specifications, and implement robust applications using cutting-edge technologies. I actively participate in code reviews, ensuring adherence to best practices and coding standards, and contribute to the continuous improvement of the development process.')
 
     return(
-        <div className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-3">
+        <div className="flex flex-col gap-4 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <SelectInputt {...input[0]}/>
                 <SelectInputt {...input[1]}/>
             </div>
@@ -27,7 +27,7 @@ const ExpInput=(props:any)=>{
                 value={jobDesc}
                 onChange={(event) => setJobDesc(event.currentTarget.value)}
             />
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <MonthPickerInput
                     label="Start date"
                     maxDate={endDate || undefined}
