@@ -3,7 +3,7 @@ import PostedJobsCard from "./PostedJobsCard.tsx";
 import {activeJobs} from "../Data/PostedJobData.tsx";
 
 const PostedJobs=()=>{
-    return(<div className="px-4 mt-6 ">
+    return(<div className="px-4 mt-6  ">
         <div className="text-2xl font-semibold text-mine-shaft-50 mb-5"> Jobs</div>
             <Tabs  autoContrast variant="pills"  radius="md" defaultValue="active" className="[&_button[aria-selected='false']]:bg-mine-shaft-800 font-medium">
                 <Tabs.List>

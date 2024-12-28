@@ -14,14 +14,14 @@ const JobsDesc=({edit}:any)=>{
                         <img src={`icons/Microsoft.png`} alt={'img'} className='h-10 w-10'/>
                     </div>
                     <div className="">
-                        <p className='text-semibold text-mine-shaft-200 text-xl'>Software Engineer</p>
+                        <p className='text-semibold text-mine-shaft-200 text-xl xsm-mx:text-lg'>Software Engineer</p>
                         <p className='text-xs text-mine-shaft-300'>Microsoft &bull; 2 days ago &#x2022; 34
                             applications</p>
                     </div>
                 </div>
-                <div className='flex flex-col items-center xs-mx:flex-row  xs-mx:items-center  xs-mx:gap-6  gap-2'>
+                <div className='flex flex-col items-center  xs-mx:w-full xs-mx:flex-row  xs-mx:items-end xs-mx:justify-start  xs-mx:gap-6  gap-2'>
                     <Button component={Link} to={'/apply-job'} variant="light" color='brightSun.4'
-                            className=' mt-5 ml-3 rounded-lg '>{edit ? "Edit" :"Apply"}</Button>
+                            className=' mt-5 ml-3 rounded-lg  '>{edit ? "Edit" :"Apply"}</Button>
                     {
                         edit ? <Button  variant="outline" color="red.5" size="sm">Delete</Button> :<IconBookmark stroke={2} className='cursor-pointer text-bright-sun-400 '/>
                     }
@@ -41,7 +41,7 @@ const JobsDesc=({edit}:any)=>{
                 ))}
             </div>
             <div className='my-10   '>
-                <h2 className='text-xl mb-5 font-semibold'>Required Skills</h2>
+                <h2 className='text-xl mb-5 font-semibold xs-mx:text-lg'>Required Skills</h2>
                 <div className='flex gap-4 flex-wrap'>
                     {
                         skills.map((item) => (
@@ -61,7 +61,7 @@ const JobsDesc=({edit}:any)=>{
             </div>
 
             <div>
-                <div className='text-xl mt-10'>About Company</div>
+                <div className='text-xl mb-5 font-semibold xs-mx:text-lg'>About Company</div>
                 <div className={'flex justify-between  flex-row xs-mx:flex-col xs-mx:gap-2'}>
 
                     <div className={'flex items-center gap-3'}>

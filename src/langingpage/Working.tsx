@@ -19,13 +19,13 @@ return(<div >
                 <p className="text-mine-shaft-300">70% completed</p>
             </div>
         </div>
-        <div className="ml-1 md:ml-0">
+        <div className="xs-mx:px-4">
             {
                 works.map((item)=>(
                     <div className="flex  gap-3 pr-2 md:pr-20 mt-10">
                         {item?.icon}
                         <div>
-                            <div className="text-mine-shaft-200 text-2xl font-semibold">{item?.title}</div>
+                            <div className="text-mine-shaft-200 text-2xl font-semibold xs-mx:text-xl">{item?.title}</div>
                             <div className="text-mine-shaft-300 mt-1 text-lg">{item?.description}</div>
                         </div>
                     </div>

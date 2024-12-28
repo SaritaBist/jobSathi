@@ -6,12 +6,12 @@ import TalentCard from "../findtalent/TalentCard.tsx";
 
 const PostedJobDesc=()=>{
     return(
-        <div className="px-4 mt-6 w-[70%]">
-            <div className="text-2xl font-semibold text-mine-shaft-100">Software Engineer</div>
+        <div className="px-4 mt-6 w-[70%]  bs-mx:w-full">
+            <div className="text-2xl font-semibold text-mine-shaft-100 xs-mx:text-lg">Software Engineer</div>
             <div className=" text-mine-shaft-300">New York,United States</div>
             <div className="mt-10">
                 <Tabs defaultValue="overview"  radius="sm">
-                    <Tabs.List className=" [&_button]:!text-lg font-semibold">
+                    <Tabs.List className=" [&_button]:!text-lg font-semibold xsm-mx:[&_button]:!text-xs " >
                         <Tabs.Tab value="overview"> Overview</Tabs.Tab>
                         <Tabs.Tab value="applicants">Applicants</Tabs.Tab>
                         <Tabs.Tab value="invited">Invited</Tabs.Tab>

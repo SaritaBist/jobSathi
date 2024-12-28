@@ -13,7 +13,7 @@ const JobCategoryPage=()=>{
             : "100%";
 
     return(<>
-        <div className="w-full my-10  px-12 ">
+        <div className="w-full my-10  px-12  xs-mx:px-5">
             <div className=" text-3xl md:text-4xl  font-semibold text-center text-mine-shaft-200 mb-2">Browse <span
                 className="text-bright-sun-400">Job </span>Category
             </div>
