@@ -1,5 +1,5 @@
-import {Button, Divider, FileInput, NumberInput, rem, Textarea, TextInput,Notification} from "@mantine/core";
-import {IconCheck, IconPaperclip} from "@tabler/icons-react";
+import {Button, Divider, FileInput, NumberInput, Textarea, TextInput} from "@mantine/core";
+import { IconPaperclip} from "@tabler/icons-react";
 
 import {useState} from "react";
 import {useNavigate} from "react-router";
@@ -7,7 +7,10 @@ import {useNavigate} from "react-router";
 const ApplyJob=()=>{
     const [preview,setPreview]=useState(false)
      const [submitData,setSubmitData]=useState(false)
+    console.log(submitData)
     const [second,setSecond]=useState(5)
+    console.log(second)
+
     const navigate=useNavigate()
     const handlePreview=()=>{
         setPreview(!preview)
