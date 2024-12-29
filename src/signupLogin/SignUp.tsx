@@ -5,8 +5,8 @@ import {Link} from "react-router-dom";
 
 const SignUp=()=>{
     return(
-        <div className="flex flex-col  gap-3 justify-center w-1/2 px-20">
-            <div className="text-2xl font-semibold mb-5">Create Account</div>
+        <div className=" h-full flex flex-col  gap-2 justify-center w-1/2 sm-mx:w-full px-20 bs-mx:px-10  md-mx:px-5 sm-mx:px-10  ">
+            <div className="text-2xl font-semibold mb-5 md-mx:mb-2  md-mx:text-xl  ">Create Account</div>
 
                <TextInput
                    label="Name"
@@ -36,8 +36,8 @@ const SignUp=()=>{
                  autoContrast
                 label="Remember me"
             />
-            <Button autoContrast variant="filled">Sign Up</Button>
-            <div className='mx-auto'>Have an account ? <Link to={'/login'} className='text-bright-sun-400 hover:underline'>Login</Link></div>
+            <Button autoContrast variant="filled " className="mt-6">Sign Up</Button>
+            <div className='mx-auto sm-mx:text-xs mt-2'>Have an account ? <Link to={'/login'} className='text-bright-sun-400 hover:underline'>Login</Link></div>
         </div>
     )
 }

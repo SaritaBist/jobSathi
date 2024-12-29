@@ -62,17 +62,17 @@ const FindDreamJobPage = () => {
                             </Avatar.Group>
                         </div>
 
-                        <div className="flex gap-2 w-fit border border-bright-sun-400 absolute top-[30%] right-[50%] md:top-[35%] md:right-[32%] p-3 rounded-lg backdrop-blur-md">
-                            <img
-                                src="/google.jpg"
-                                alt="Google logo"
-                                className="w-8 h-8 md:w-12 md:h-12 rounded-lg"
-                            />
-                            <div className="flex flex-col text-sm md:text-base text-mine-shaft-100">
-                                <div>Software Engineer</div>
-                                <div>New York</div>
-                            </div>
-                        </div>
+                        {/*<div className="flex gap-2 w-fit border border-bright-sun-400 absolute top-[30%] right-[50%] md:top-[35%] md:right-[32%] p-3 rounded-lg backdrop-blur-md">*/}
+                        {/*    <img*/}
+                        {/*        src="/google.jpg"*/}
+                        {/*        alt="Google logo"*/}
+                        {/*        className="w-8 h-8 md:w-12 md:h-12 rounded-lg"*/}
+                        {/*    />*/}
+                        {/*    <div className="flex flex-col text-sm md:text-base text-mine-shaft-100">*/}
+                        {/*        <div>Software Engineer</div>*/}
+                        {/*        <div>New York</div>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>
