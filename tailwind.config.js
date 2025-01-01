@@ -1,3 +1,6 @@
+
+import tailwindcssMotion from 'tailwindcss-motion';
+import tailwindcssIntersect from 'tailwindcss-intersect';
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -59,7 +62,7 @@ export default {
     }
   },
   plugins: [
-    require('tailwindcss-motion'),
-    require('tailwindcss-intersect')
+    tailwindcssMotion,
+    tailwindcssIntersect,
   ],
 }
