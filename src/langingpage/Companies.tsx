@@ -3,7 +3,7 @@ import {Companies} from "../data.tsx";
 
 const CompaniesPage=()=>{
    return(<>
-       <div className="text-3xl md:text-4xl mt-6  font-semibold text-center text-mine-shaft-200 ">Trusted By <span className="text-bright-sun-400">1000+</span>Companies</div>
+       <div className="text-3xl md:text-4xl mt-6  font-semibold text-center text-mine-shaft-200 intersect:motion-preset-expand  ">Trusted By <span className="text-bright-sun-400">1000+</span>Companies</div>
        <Marquee pauseOnHover>
            {
               Companies.map(company => (<div className='mt-3'>

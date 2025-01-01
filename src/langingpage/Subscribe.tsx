@@ -4,7 +4,7 @@ import {useMediaQuery} from "@mantine/hooks";
 const Subscribe=()=>{
     const matches = useMediaQuery('(max-width: 516px');
 return(
-    <div className="mt-20 bg-mine-shaft-800 mx-10 xs-mx:mx-4 p-4 xs-mx:p-2 rounded-xl flex flex-col md:flex-row  justify-around ">
+    <div className="mt-20 bg-mine-shaft-800 mx-10 xs-mx:mx-4 p-4 xs-mx:p-2 rounded-xl flex flex-col md:flex-row  justify-around intersect:motion-preset-expand">
       <div className="text-2xl md:text-3xl  lg-text-4xl w-full  md:w-[40%] font-semibold text-center text-mine-shaft-100 mb-2">Never Want's to Miss Any   <span
         className="text-bright-sun-400">Job News ?</span>
       </div>

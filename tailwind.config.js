@@ -58,5 +58,8 @@ export default {
       'xsm-mx': { 'max': '349px' },
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-motion'),
+    require('tailwindcss-intersect')
+  ],
 }

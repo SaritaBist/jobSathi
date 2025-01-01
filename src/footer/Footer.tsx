@@ -20,8 +20,8 @@ const Footer=()=>{
     ];
 
     return(
-        <div className="bg-mine-shaft-950 min-w-fit mx-auto pb-52 pt-4 font-['poppins'] ">
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 place-items-center px-4 sm:px-10 md:px-20 py-10   '>
+        <div className="bg-mine-shaft-950 min-w-fit mx-auto pb-10 pt-4 font-['poppins']">
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 place-items-center px-4 sm:px-10 md:px-20 py-10  intersect:motion-translate-x-in-[-1%] intersect:motion-translate-y-in-[40%] motion-ease-spring-smooth  motion-duration-2000  '>
                 <div className="  flex flex-col gap-4 ml-20">
                     <div className="flex  gap-1 items-center cursor-pointer">
                         <IconBrandBebo className="text-bright-sun-400 h-8 w-8"/>

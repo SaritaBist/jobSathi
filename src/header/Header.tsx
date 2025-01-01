@@ -19,7 +19,7 @@ const links=[
 const HeaderPage=()=>{
     const [opened, { open, close }] = useDisclosure(false);
     return(
-        <div className="w-[100%] ">
+        <div className="w-[100%] motion-translate-x-in-[-1%] motion-translate-y-in-[-33%] motion-ease-spring-smooth motion-duration-1500">
         <div className=" sticky top-0  z-10  bg-mine-shaft-950 h-16 text-white flex justify-between px-10 items-center ">
            <div className="flex  gap-1 items-center">
                <IconBrandBebo  className="text-bright-sun-400 h-10 w-10 md:h-8 md:w-8"/>

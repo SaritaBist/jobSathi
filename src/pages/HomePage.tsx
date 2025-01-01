@@ -13,7 +13,7 @@ import Subscribe from "../langingpage/Subscribe.tsx";
 
 const HomePage=()=>{
 return(
-    <div className="min-h-screen min-w-screen min-w-full font-['poppins'] pb-16 bg-mine-shaft-900 overflow-x-hidden overflow-y-hidden  ">
+    <div className="min-h-screen min-w-screen min-w-full font-['poppins'] pb-4 bg-mine-shaft-900 overflow-x-hidden overflow-y-hidden  ">
 
             <FindDreamJob/>
             <Companies/>

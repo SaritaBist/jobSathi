@@ -6,7 +6,7 @@ const FindDreamJobPage = () => {
         <div className="w-full">
             <div className="flex flex-col lg:flex-row items-center px-4 lg:px-16">
 
-                <div className="w-full lg:w-1/2 flex flex-col gap-6 text-center lg:text-left">
+                <div className="w-full lg:w-1/2 flex flex-col gap-6 text-center lg:text-left motion-scale-in-[0.5] motion-translate-x-in-[-26%] motion-translate-y-in-[-15%] motion-ease-spring-smooth ">
                     <div className="text-4xl md:text-6xl text-mine-shaft-100 mt-5 md:mt-0">
                         Find your{" "}
                         <span className="text-bright-sun-400 leading-tight">
@@ -46,7 +46,7 @@ const FindDreamJobPage = () => {
                 </div>
 
 
-                <div className="w-full lg:w-1/2 flex items-center justify-center mt-8 lg:mt-0">
+                <div className="w-full lg:w-1/2 flex items-center justify-center mt-8 lg:mt-0 motion-translate-x-in-[165%] motion-translate-y-in-[-11%] motion-ease-spring-smooth motion-duration-2000">
                     <div className="w-full max-w-xs md:max-w-md relative">
                         <img src="Boy.png" alt="image" className="w-full" />
 
