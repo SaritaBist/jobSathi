@@ -17,6 +17,8 @@ import LoginPage from "./pages/LoginPage.tsx";
 import PostedJobsPage from "./pages/PostedJobsPage.tsx";
 import JobHistoryPage from "./pages/JobHistoryPage.tsx";
 import ProfilePage from "./pages/ProfilePage.tsx";
+import ProtectedRoute from "./context/ProtectedRoutes.tsx";
+import Anuathorized from "./pages/Unauthorized.tsx";
 
 function App() {
 
@@ -40,27 +42,27 @@ function App() {
             },
             {
                 path:'/find-talent',
-                element:<>
+                element:<ProtectedRoute roles={['admin']}>
                     <Header/>
                      <FindTalent/>
                     <Footer/>
-                </>
+                </ProtectedRoute>
             },
             {
                 path:'/post-jobs',
-                element:<>
+                element:<ProtectedRoute roles={['admin']}>
                     <Header/>
                     <PostJobsPage/>
                     <Footer/>
-                </>
+                </ProtectedRoute>
             },
             {
                 path:'/posted-jobs',
-                element:<>
+                element:<ProtectedRoute roles={['admin','user']}>
                     <Header/>
-                   <PostedJobsPage/>
+                    <PostedJobsPage/>
                     <Footer/>
-                </>
+                </ProtectedRoute>
             },
             {
                 path:'/talent-profile',
@@ -123,6 +125,20 @@ function App() {
                 path:'/login',
                 element:<>
                     <LoginPage/>
+                </>
+            },
+            {
+                path:'*',
+                element:<>
+                    <Header/>
+                    <HomePage/>
+                    <Footer/>
+                </>
+            },
+            {
+                path:'/unauthorized',
+                element:<>
+                    <Anuathorized/>
                 </>
             },
         ]

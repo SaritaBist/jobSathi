@@ -10,13 +10,17 @@ import '@mantine/dates/styles.css';
 import { MantineProvider} from '@mantine/core';
 import theme from "./Themes.ts";
 import ObserverProvider from "../ObserverProvider.tsx";
+import UserContextProvider from "./context/UserContextProvider.tsx";
 
 
 createRoot(document.getElementById('root')!).render(
 
     <ObserverProvider>
     <MantineProvider defaultColorScheme={'dark'} theme={theme}>
+        <UserContextProvider>
             <App/>
+        </UserContextProvider>
+
         </MantineProvider>
     </ObserverProvider>
 
