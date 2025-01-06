@@ -1,21 +1,29 @@
-import {useContext} from "react";
+import { useContext, ReactNode } from "react";
+import { Navigate } from "react-router-dom";
+import { UserContext } from "./UserContext.jsx";
 
-import {Navigate} from "react-router-dom";
-import {UserContext} from "./UserContext.jsx";
-
-
-const ProtectedRoute=({children,roles})=>{
-
-    const  {role,authenticated}=useContext(UserContext)
-
-    if(!authenticated){
-        return <Navigate to={'/login'}/>
-    }
-
-    if(!roles.includes(role))
-    {
-        return <Navigate to={'/unauthorized'}/>
-    }
-    return children
+interface ProtectedRouteProps {
+    children: ReactNode;
+    roles: string[];
 }
-export  default ProtectedRoute
+
+interface UserContextType {
+    role: string;
+    authenticated: boolean;
+}
+const ProtectedRoute = ({ children, roles }: ProtectedRouteProps) => {
+
+    const { role, authenticated }:UserContextType  = useContext(UserContext);
+
+    if (!authenticated) {
+        return <Navigate to={'/login'} />;
+    }
+
+    if (!roles.includes(role)) {
+        return <Navigate to={'/unauthorized'} />;
+    }
+
+    return <>{children}</>;
+};
+
+export default ProtectedRoute;

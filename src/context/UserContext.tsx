@@ -1,3 +1,8 @@
-import {createContext} from "react";
+import { createContext } from 'react';
 
-export const UserContext=createContext()
+interface UserContextType {
+    role: string;
+    authenticated: boolean;
+}
+
+export const UserContext = createContext<UserContextType >({role:'admin',authenticated:false});
