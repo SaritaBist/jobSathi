@@ -6,7 +6,7 @@ interface ContextProviderProps {
 }
 
 const ContextProvider = ({ children }: ContextProviderProps) => {
-    const role = 'user';
+    const role = 'admin';
     const authenticated = true;
 
     return (
